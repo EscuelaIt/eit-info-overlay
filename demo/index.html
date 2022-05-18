@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+  <div id="demo2"></div>
+
+  <script type="module">
+    import { html, render } from 'lit';
+    import '../eit-info-overlay.js';
+
+    render(
+      html`
+        <eit-info-overlay>
+          <div slot="info">esto es lo que aparece</div>
+        </eit-info-overlay>
+      `,
+      document.querySelector('#demo')
+    );
+
+    render(
+      html`
+        <style>
+          p.right {
+            text-align: right;
+            --eit-info-overlay-icon-color: blue;
+          }
+          p.center {
+            text-align: center;
+            --eit-info-overlay-icon-size: 50px;
+            --eit-info-overlay-background-color: orange;
+            --eit-info-overlay-color: white;
+            
+          }
+        </style>
+        <p class="right">
+          <eit-info-overlay horizontalAlign="left" moveLeft="60" verticalAlign="center">
+            <span slot="info">esto es lo que aparece</span>
+          </eit-info-overlay>
+        </p>
+        <p class="center">
+          <eit-info-overlay opened horizontalAlign="center" verticalAlign="top" moveTop="-12">
+            <span slot="info">esto es lo que aparece</span>
+          </eit-info-overlay>
+        </p>
+      `,
+      document.querySelector('#demo2')
+    );
+  </script>
+</body>
+</html>
