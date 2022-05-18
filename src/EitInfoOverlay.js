@@ -78,7 +78,7 @@ export class EitInfoOverlay extends DileOverlayMixin(DileCloseOnEscPressed(DileC
                 ${icon}
             </span>
             <div id="overlay" class="${this._overlayClass}">
-                <slot name="info"></slot>
+                <slot></slot>
             </div>
         `;
     }
