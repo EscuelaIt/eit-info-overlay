@@ -2,7 +2,7 @@
   "name": "eit-info-overlay",
   "description": "Webcomponent eit-info-overlay following open-wc recommendations",
   "license": "MIT",
-  "author": "eit-info-overlay",
+  "author": "Miguel at EscuelaIT",
   "version": "0.0.0",
   "main": "index.js",
   "module": "index.js",
