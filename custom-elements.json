@@ -1,0 +1,182 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "eit-info-overlay.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "eit-info-overlay",
+          "declaration": {
+            "name": "EitInfoOverlay",
+            "module": "/src/EitInfoOverlay.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "EitInfoOverlay",
+          "declaration": {
+            "name": "EitInfoOverlay",
+            "module": "./src/EitInfoOverlay.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/EitInfoOverlay.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "EitInfoOverlay",
+          "members": [
+            {
+              "kind": "method",
+              "name": "stopClick",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "escClose",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "opened",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "privacy": "public",
+              "attribute": "opened"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "opened",
+              "fieldName": "opened"
+            }
+          ],
+          "mixins": [
+            {
+              "name": "DileOverlayMixin",
+              "package": "@dile/dile-overlay-mixin"
+            },
+            {
+              "name": "DileCloseDocumentClickMixin",
+              "package": "@dile/dile-close-document-click-mixin"
+            },
+            {
+              "name": "DileCloseOnEscPressed",
+              "package": "@dile/dile-close-on-esc-pressed-mixin"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "eit-info-overlay",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "EitInfoOverlay",
+          "declaration": {
+            "name": "EitInfoOverlay",
+            "module": "src/EitInfoOverlay.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "stories/index.stories.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "Regular"
+        },
+        {
+          "kind": "variable",
+          "name": "CustomOpened"
+        },
+        {
+          "kind": "variable",
+          "name": "CustomPosition"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "stories/index.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Regular",
+          "declaration": {
+            "name": "Regular",
+            "module": "stories/index.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "CustomOpened",
+          "declaration": {
+            "name": "CustomOpened",
+            "module": "stories/index.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "CustomPosition",
+          "declaration": {
+            "name": "CustomPosition",
+            "module": "stories/index.stories.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "coverage/lcov-report/block-navigation.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "coverage/lcov-report/prettify.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "coverage/lcov-report/sorter.js",
+      "declarations": [],
+      "exports": []
+    }
+  ]
+}
