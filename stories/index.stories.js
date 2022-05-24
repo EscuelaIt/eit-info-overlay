@@ -11,34 +11,35 @@ export default {
   },
 };
 
-function Template({ title = 'Hello world', counter = 5, textColor, slot }) {
+function Template({ opened = false, horizontalAlign = 'under', slot }) {
   return html`
-    <eit-info-overlay
-      style="--eit-info-overlay-text-color: ${textColor || 'black'}"
-      .title=${title}
-      .counter=${counter}
-    >
+  <style>
+    div{
+      padding: 5rem;
+    }
+  </style>
+  <div>
+    <eit-info-overlay ?opened=${opened} horizontalAlign=${horizontalAlign}>
       ${slot}
     </eit-info-overlay>
+  </div>
   `;
 }
 
 export const Regular = Template.bind({});
-
-export const CustomTitle = Template.bind({});
-CustomTitle.args = {
-  title: 'My title',
+Regular.args = {
+  slot: html`Probando esto es un slot`,
 };
 
-export const CustomCounter = Template.bind({});
-CustomCounter.args = {
-  counter: 123456,
+export const CustomOpened = Template.bind({});
+CustomOpened.args = {
+  slot: html`<b>Probando</b> esto es un slot pero un poco mayor`,
+  opened: true,
 };
 
-export const SlottedContent = Template.bind({});
-SlottedContent.args = {
-  slot: html`<p>Slotted content</p>`,
+export const CustomPosition = Template.bind({});
+CustomPosition.args = {
+  slot: html`<b>Probando</b> esto es un slot pero un poco mayor`,
+  horizontalAlign: 'right',
 };
-SlottedContent.argTypes = {
-  slot: { table: { disable: true } },
-};
+
