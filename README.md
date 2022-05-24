@@ -2,6 +2,8 @@
 
 This webcomponent follows the [open-wc](https://github.com/open-wc/open-wc) recommendation.
 
+[Go to demo!](https://escuelait.github.io/eit-info-overlay/)
+
 ## Installation
 
 ```bash
