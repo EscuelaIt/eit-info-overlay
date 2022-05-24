@@ -9,8 +9,19 @@
   </style>
 </head>
 <body>
+  <style>
+    p.center {
+      text-align: center;
+      --eit-info-overlay-icon-size: 50px;
+      --eit-info-overlay-background-color: orange;
+      --eit-info-overlay-color: white;
+    }
+    .info2 {
+      --eit-info-overlay-width: 300px;
+    }
+  </style>
+
   <div id="demo"></div>
-  <div id="demo2"></div>
 
   <script type="module">
     import { html, render } from 'lit';
@@ -18,45 +29,28 @@
 
     render(
       html`
+        <h2>Default info overlay</h2>
         <eit-info-overlay>
           esto es lo que aparece
         </eit-info-overlay>
-      `,
-      document.querySelector('#demo')
-    );
 
-    render(
-      html`
-        <style>
-          p.right {
-            text-align: right;
-            --eit-info-overlay-icon-color: blue;
-            --eit-info-overlay-icon-size: 250px;
-
-          }
-          p.center {
-            text-align: center;
-            --eit-info-overlay-icon-size: 50px;
-            --eit-info-overlay-background-color: orange;
-            --eit-info-overlay-color: white;
-          }
-          .info2 {
-            --eit-info-overlay-width: 300px;
-          }
-        </style>
-        <p class="right">
+        <h2>Horizontal align right</h2>
+        <p class="center">
           <eit-info-overlay horizontalAlign="right" moveLeft="0" verticalAlign="center" class="info2">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum laudantium culpa facilis nemo ipsa? Itaque cum similique at, cupiditate quos maiores temporibus voluptates tenetur nemo in quam, autem accusamus repellendus!
           </eit-info-overlay> 
         </p>
+
+        <h2>Horizontal align center</h2>
         <p class="center">
-          <eit-info-overlay  horizontalAlign="under" verticalAlign="top" moveTop="-12" moveLeft="0">
+          <eit-info-overlay  horizontalAlign="center" verticalAlign="top" moveTop="-12" moveLeft="0">
             esto es lo que aparece
           </eit-info-overlay>
         </p>
       `,
-      document.querySelector('#demo2')
+      document.querySelector('#demo')
     );
+
   </script>
 </body>
 </html>
