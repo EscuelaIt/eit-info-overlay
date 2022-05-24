@@ -19,7 +19,7 @@
   "dependencies": {
     "@dile/dile-close-document-click-mixin": "^1.0.0",
     "@dile/dile-close-on-esc-pressed-mixin": "^1.1.0",
-    "@dile/dile-overlay-mixin": "^1.1.3",
+    "@dile/dile-overlay-mixin": "^2.0.0",
     "lit": "^2.0.2"
   },
   "devDependencies": {

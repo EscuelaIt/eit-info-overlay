@@ -1,11 +1,10 @@
 import { LitElement, html, css } from 'lit';
 import { DileOverlayMixin } from '@dile/dile-overlay-mixin';
 import { DileCloseDocumentClickMixin } from '@dile/dile-close-document-click-mixin';
-import { DileCloseOnEscPressed } from '@dile/dile-close-on-esc-pressed-mixin';
 
 const icon = html`<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>`;
 
-export class EitInfoOverlay extends DileOverlayMixin(DileCloseOnEscPressed(DileCloseDocumentClickMixin(LitElement))) {
+export class EitInfoOverlay extends DileOverlayMixin(DileCloseDocumentClickMixin(LitElement)) {
     static styles = [
         css`
             :host {
@@ -18,6 +17,7 @@ export class EitInfoOverlay extends DileOverlayMixin(DileCloseOnEscPressed(DileC
               cursor: pointer;
             }
             #overlay {
+              box-sizing: border-box;
               display: none;
               position: absolute;
               text-align: left;
@@ -27,7 +27,7 @@ export class EitInfoOverlay extends DileOverlayMixin(DileCloseOnEscPressed(DileC
               padding: var(--eit-info-overlay-padding, 1rem);
               border: var(--eit-info-overlay-border, 1px solid #eee);
               box-shadow: var(--eit-info-overlay-box-shadow, 0 0 10px rgba(0, 0, 0, 0.2));
-              width: 250px;
+              width: var(--eit-info-overlay-width, 250px);
               transition: ease 0.5s;
               transition-property: transform, opacity;
               transform: translateY(-10px);
