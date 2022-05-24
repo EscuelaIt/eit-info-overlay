@@ -77,9 +77,13 @@ export class EitInfoOverlay extends DileOverlayMixin(DileCloseDocumentClickMixin
             <span id="trigger" @click=${this.toggle}>
                 ${icon}
             </span>
-            <div id="overlay" class="${this._overlayClass}">
+            <div id="overlay" @click=${this.stopClick} class="${this._overlayClass}">
                 <slot></slot>
             </div>
         `;
+    }
+
+    stopClick(e) {
+      e.stopPropagation();
     }
 }
